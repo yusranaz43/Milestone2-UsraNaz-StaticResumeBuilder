@@ -58,7 +58,7 @@ section {
     /* display: none; */
 }
 
-section #education, #skills, #experience{
+#education, #skills, #experience{
     display: none;
 }
 
