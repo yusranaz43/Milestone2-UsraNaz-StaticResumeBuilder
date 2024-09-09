@@ -7,71 +7,90 @@
     <link rel="StyleSheet" href="style.css">
 </head>
 <body>
-    <h1>Static Resume Builder</h1>
-    <form>
+    
+    <div class="main">
+        <header>
+            <div class="header">
+              <img src="image/profile-pic.PNG" alt="Photo Here" class="profile-image">
+              <div class="header-text">
+              <h1>Yusra Naz</h1>
+              <p>Frontend Developer</p>
+              <p>Email: yusra@example.com  |  Phone: +92 000 1111100</p>
+              
+            </div>
+        </div>
+        </header>
 
-        <fieldset>
+        <section id="summary">
+            <h2>Professional Summary</h2>
+             <p>An enthusiastic and dedicated web developer with experience in creating dynamic and user-friendly websites.</p>
+        </section>
 
-            <legend>Personal Information</legend>
+        <div class="buttons">
+            <button onclick="toggleSection('education')">Education</button>
+            <button onclick="toggleSection('skills')">Skills</button>
+            <button onclick="toggleSection('experience')">Experience</button>
+        </div>
 
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" required><br><br>
+        <section class="education" id="education">
+            <h2>Education</h2>
 
-            <label for="phone-number">Phone Number:</label>
-            <input type="tel" id="phone-number" name="phone-number" placeholder="Your Phone Number" required><br><br>
+               <div class="uni">
+                <h3>BS in Computer Science</h3>
+                <p>From Federal Urdu University of Arts, Science and Technology</p>
+                <p>2020 - 2024</p>
+               </div>
+        </section>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Your Email" required><br><br>
+        <section class="skills" id="skills">
+            <h2>Skills</h2>
+            <ul>
+                    <li>HTML, CSS, Typescript</li>
+                    <li>Social Media Marketing</li>
+                    <li>Graphic Designer at Canva</li>
+                    <li>Team Work and Collaboration</li>
+                    <li>MS Office</li>
+                    <li>Computer Operations</li>
+            </ul>
+        </section>
 
-        </fieldset>
+        <section class="experience" id="experience">
+            <h2>Work Experience</h2>
+            <div class="job">
+               <h3>Frontend Developer</h3> 
+               <p>XYZ Company | Jan 2024 - Past</p>
+               <ul>
+                 <li>Developed responsive web pages using HTML, CSS, and TypeScript.</li>
+                 <li>Collaborated with designers to create user-friendly interfaces.</li>
+                 <li>Optimized websites for performance and SEO.</li>
+               </ul>
+            </div>
+        </section>
 
-        <fieldset>
-            
-            <legend>Education</legend>
-            
-            <label for="institue-name">Institue Name:</label>
-            <input type="text" id="institue-name" name="institue-name" placeholder="Your Institute Name"><br><br>
+        <footer>
+            <div>&copy; 2024 Created By GIAIC Student Yusra Naz</div>
+        </footer>
 
-            <label for="field-of-study">Field of Study:</label>
-            <input type="text" id="field-of-study" name="study-field" placeholder="Computer Science or Other"><br><br>
-
-            <label for="degree">Degree:</label>
-            <input type="text" id="degree" name="degree" placeholder="E.g: BS/BSCS"><br><br>
-
-            <label for="completion-year">Completion Year:</label>
-            <input type="number" id="completion-year" name="completion-year" placeholder="E.g: 2023/2024"><br><br>
-
-        </fieldset>
-
-        <fieldset>
-
-            <legend>Skills</legend>
-
-            <label for="skills-list">List Your Skills:</label>
-            <textarea id="skills-list" name="skills-list" placeholder="E.g: HTML, CSS, TypeScript" rows="4"></textarea><br><br>
-
-        </fieldset>
-
-        <fieldset>
-
-            <legend>Work Experience</legend>
-
-            <label for="job-title">Job Title:</label>
-            <input type="text" id="job-title" name="job-title" placeholder="Your Job Title"><br><br>
-
-            <label for="company-name">Company Name:</label>
-            <input type="text" id="company-name" name="company-name" placeholder="Your Company"><br><br>
-
-            <label for="duration">Duration:</label>
-            <input type="text" id="duration" name="duration" placeholder="E.g: April 2024 - Past"><br><br>
-
-        </fieldset>
-
-        <button id="submit">Generate Resume</button>
-    </form>
+    </div>
+    
+    <script>
+        function toggleSection(sectionId) {
+          var section = document.getElementById(sectionId);
+            if (section.style.display === "none") {
+                section.style.display = "block";
+            } else {
+                section.style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 </html>
+
+
+
+
+
 
 
 
